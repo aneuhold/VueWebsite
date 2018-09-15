@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test Calculator</title>
+        <link href="styles.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <h2>Multiplication table</h2>
+            <input type="text" ref="input"/>
+            <button v-on:click="outputMultiTable">Get Multiplication Table</button>
+            <p>Result: {{result}}</p>
+        </div>
+    </body>
+
+    <script src="vue.js"></script>
+</html>
