@@ -1,24 +1,24 @@
 new Vue({
   el: '#vue-app',
   data: {
-    result: 'Result'
+    result: 'Result',
+    multiples: []
   },
   methods: {
     outputMultiTable: function() {
       console.log(this.$refs.input.value);
       let num = this.$refs.input.value;
-      let resultString = '';
       
       function outputMultiplication(multiplyBy, multiplier) {
         let result = multiplyBy * multiplier;
         return multiplyBy + ' x ' + multiplier + ' = ' + result;
       }
 
-      for (let i = 0; i <= 12; i++) {
-        resultString += outputMultiplication(num, i) + '<br>';
-      }
+      this.$data.multiples = [];
 
-      this.result = resultString;
+      for (let i = 0; i <= 12; i++) {
+        this.$data.multiples.push(outputMultiplication(num, i));
+      }
     }
   }
 });

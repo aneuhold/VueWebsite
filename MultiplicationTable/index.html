@@ -11,7 +11,7 @@
             <h2>Multiplication table</h2>
             <input type="text" ref="input"/>
             <button v-on:click="outputMultiTable">Get Multiplication Table</button>
-            <p>Result: {{result}}</p>
+            <li v-for="multiplicationLine in multiples"> {{ multiplicationLine }}</li>
         </div>
     </body>
 
